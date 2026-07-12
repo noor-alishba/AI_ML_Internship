@@ -1,0 +1,128 @@
+{% extends "base.html" %}
+{% block title %}Dashboard - Student Management System{% endblock %}
+{% block content %}
+
+Statistics cards
+<div class="row g-3 mb-4">
+    <div class="col-md-3 col-sm-6">
+        <div class="card stat-card shadow-sm h-100">
+            <div class="card-body">
+                <i class="bi bi-people-fill fs-2 text-primary"></i>
+                <h6 class="text-muted mt-2 mb-0">Total Students</h6>
+                <h3 class="fw-bold mb-0">{{ stats.total_students if stats else 0 }}</h3>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-6">
+        <div class="card stat-card shadow-sm h-100">
+            <div class="card-body">
+                <i class="bi bi-trophy-fill fs-2 text-success"></i>
+                <h6 class="text-muted mt-2 mb-0">Highest CGPA</h6>
+                <h3 class="fw-bold mb-0">{{ stats.highest_cgpa if stats else "-" }}</h3>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-6">
+        <div class="card stat-card shadow-sm h-100">
+            <div class="card-body">
+                <i class="bi bi-graph-down-arrow fs-2 text-warning"></i>
+                <h6 class="text-muted mt-2 mb-0">Lowest CGPA</h6>
+                <h3 class="fw-bold mb-0">{{ stats.lowest_cgpa if stats else "-" }}</h3>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-6">
+        <div class="card stat-card shadow-sm h-100">
+            <div class="card-body">
+                <i class="bi bi-bar-chart-fill fs-2 text-info"></i>
+                <h6 class="text-muted mt-2 mb-0">Average CGPA</h6>
+                <h3 class="fw-bold mb-0">{{ stats.average_cgpa if stats else "-" }}</h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Department-wise counts (only shown if we have students) -->
+{% if stats %}
+<div class="card shadow-sm mb-4">
+    <div class="card-body">
+        <h6 class="text-muted mb-3"><i class="bi bi-building me-2"></i>Department-wise Student Count</h6>
+        <div class="d-flex flex-wrap gap-2">
+            {% for department, count in stats.department_counts.items() %}
+                <span class="badge dept-badge">{{ department }}: {{ count }}</span>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endif %} 
+
+<!-- Student table -->
+ <div class="card shadow-sm">
+    <div class="card-body">
+        <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 gap-2">
+            <h5 class="mb-0"><i class="bi bi-table me-2"></i>All Students</h5>
+            <div class="btn-group">
+                <a href="{{ url_for('sort_students', key='name') }}" class="btn btn-outline-primary btn-sm">
+                    <i class="bi bi-sort-alpha-down"></i> Name
+                </a>
+                <a href="{{ url_for('sort_students', key='department') }}" class="btn btn-outline-primary btn-sm">
+                    <i class="bi bi-building"></i> Department
+                </a>
+                <a href="{{ url_for('sort_students', key='cgpa') }}" class="btn btn-outline-primary btn-sm">
+                    <i class="bi bi-graph-up"></i> CGPA
+                </a>
+            </div>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table table-hover align-middle mb-0">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Department</th>
+                        <th>Semester</th>
+                        <th>CGPA</th>
+                        <th class="text-end">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for student in students %}
+                    <tr>
+                        <td>{{ student.student_id }}</td>
+                        <td>{{ student.name }}</td>
+                        <td>{{ student.age }}</td>
+                        <td>{{ student.department }}</td>
+                        <td>{{ student.semester }}</td>
+                        <td><span class="badge bg-primary">{{ student.cgpa }}</span></td>
+                        <td class="text-end">
+                            <a href="{{ url_for('update_student', student_id=student.student_id) }}"
+                               class="btn btn-sm btn-outline-secondary" title="Update">
+                                <i class="bi bi-pencil-square"></i>
+                            </a>
+                            <form action="{{ url_for('delete_student', student_id=student.student_id) }}"
+                                  method="POST" class="d-inline"
+                                  onsubmit="return confirm('Are you sure you want to delete this student?');">
+                                <button type="submit" class="btn btn-sm btn-outline-danger" title="Delete">
+                                    <i class="bi bi-trash"></i>
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
+                    {% else %}
+                    <tr>
+                        <td colspan="7" class="text-center text-muted py-4">
+                            No students added yet. Click "Add Student" to get started.
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+{% endblock %} 
+
+

@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block title %}Update Student - Student Management System{% endblock %}
+{% block content %}
+
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card shadow-sm">
+            <div class="card-body p-4">
+                <h5 class="mb-4">
+                    <i class="bi bi-pencil-square me-2"></i>Update Student
+                    <span class="text-muted">({{ student.student_id }})</span>
+                </h5>
+
+                <form method="POST">
+                    <div class="mb-3">
+                        <label class="form-label">Name</label>
+                        <input type="text" name="name" class="form-control" value="{{ student.name }}" required>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Age</label>
+                            <input type="text" name="age" class="form-control" value="{{ student.age }}" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Semester</label>
+                            <input type="text" name="semester" class="form-control" value="{{ student.semester }}" required>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Department</label>
+                        <input type="text" name="department" class="form-control" value="{{ student.department }}" required>
+                    </div>
+                    <div class="mb-4">
+                        <label class="form-label">CGPA</label>
+                        <input type="text" name="cgpa" class="form-control" value="{{ student.cgpa }}" required>
+                    </div>
+
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="bi bi-check-circle me-1"></i> Save Changes
+                        </button>
+                        <a href="{{ url_for('index') }}" class="btn btn-outline-secondary">Cancel</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

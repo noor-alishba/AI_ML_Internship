@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block title %}Search Student - Student Management System{% endblock %}
+{% block content %}
+
+<div class="row justify-content-center">
+    <div class="col-md-6">
+
+        <div class="card shadow-sm mb-4">
+            <div class="card-body p-4">
+                <h5 class="mb-4"><i class="bi bi-search me-2"></i>Search Student by ID</h5>
+                <form method="POST" class="d-flex gap-2">
+                    <input type="text" name="student_id" class="form-control"
+                           placeholder="Enter Student ID (e.g. S001)" value="{{ searched_id }}" required>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        {% if student %}
+        <div class="card shadow-sm">
+            <div class="card-body p-4">
+                <h5 class="mb-3 text-success">
+                    <i class="bi bi-check-circle-fill me-2"></i>Student Found
+                </h5>
+                <table class="table mb-3">
+                    <tr><th class="text-muted">ID</th><td>{{ student.student_id }}</td></tr>
+                    <tr><th class="text-muted">Name</th><td>{{ student.name }}</td></tr>
+                    <tr><th class="text-muted">Age</th><td>{{ student.age }}</td></tr>
+                    <tr><th class="text-muted">Department</th><td>{{ student.department }}</td></tr>
+                    <tr><th class="text-muted">Semester</th><td>{{ student.semester }}</td></tr>
+                    <tr><th class="text-muted">CGPA</th><td><span class="badge bg-primary">{{ student.cgpa }}</span></td></tr>
+                </table>
+                <a href="{{ url_for('update_student', student_id=student.student_id) }}" class="btn btn-outline-secondary btn-sm">
+                    <i class="bi bi-pencil-square"></i> Update This Student
+                </a>
+            </div>
+        </div>
+        {% endif %}
+
+    </div>
+</div>
+
+{% endblock %}
