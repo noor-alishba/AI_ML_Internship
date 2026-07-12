@@ -1,71 +1,66 @@
-# 🎓 Student Management System
+#   🎓 Student Management System
 
-A professional, menu-driven **Student Management System** built with
-**Python 3** and **Object-Oriented Programming (OOP)**. Designed as a
-clean, modular, beginner-friendly project suitable for an AI/ML
-internship submission or GitHub portfolio.
+A Python-based Student Management System with both a **command-line interface** and a **Flask web interface**. Both interfaces share a single core module, so records added, updated, or deleted from one are immediately reflected in the other, and data persists between sessions in a local JSON file.
 
----
+##  ✨ Features
 
-## ✨ Features
+- **Add Student** – create a new record with a unique Student ID
+- **View All Students** – list every record in a formatted table
+- **Search Student** – look up a record by Student ID
+- **Update Student** – edit name, age, department, semester, or CGPA
+- **Delete Student** – remove a record with confirmation
+- **Sort Students** – order records by name, department, or CGPA
+- **Statistics** – total students, highest/lowest/average CGPA, and per-department counts
+- **Save / Load Data** – persist records to `student_data.json`
+- **Activity Logging** – every action is timestamped in `activity.log`
+- **Input Validation** – ID uniqueness, age (15–100), semester (1–12), and CGPA (0.0–4.0) are validated before saving
+- **Dual Interface** – identical functionality via terminal or browser
 
-- **Beautiful CLI welcome screen** with project title and live date/time
-- **Full CRUD operations** — Add, View, Search, Update, Delete students
-- **Sorting** by Name, Department, or CGPA
-- **Statistics dashboard** — total students, highest/lowest/average CGPA,
-  department-wise counts
-- **JSON-based persistence** — auto-loads on startup, auto-saves on exit
-- **Input validation** with friendly error messages (empty fields,
-  numeric checks, CGPA range, unique student IDs)
-- **Colorized output** using `colorama` (green = success, yellow =
-  warning, red = error, cyan = headings)
-- **Activity logging** — every action is timestamped in `activity.log`
-- **Robust exception handling** throughout the app
+##  🛠️ Technologies Used
 
----
+- Python 3
+- Flask (web interface)
+- Colorama (colored CLI output)
+- JSON (data storage)
+- Jinja2 / HTML (web templates)
 
-## 🗂️ Project Structure
+##  🗂️ Project Structure
 
 ```
-Student_Management_System/
-│
-├── main.py              # Application entry point & CLI menu logic
+student-management-system/
+├── main.py             # Command-line application entry point
+├── app.py               # Flask web application entry point
+├── student_manager.py   # Core business logic (add, search, update, delete, sort, stats)
 ├── student.py            # Student class (data model)
-├── student_manager.py     # Core business logic (CRUD, sort, stats)
-├── file_manager.py        # JSON file save/load handling
-├── validator.py           # Input validation logic
-├── logger.py               # Activity logging setup
-├── utils.py                 # CLI helpers (colors, tables, screens)
-├── student_data.json         # Saved student records (auto-generated)
-├── activity.log                # Action log (auto-generated)
-├── requirements.txt             # Python dependencies
-└── README.md                     # Project documentation
+├── validator.py          # Input validation rules and ValidationError
+├── file_manager.py       # JSON file read/write operations
+├── logger.py              # Activity logging to activity.log
+├── utils.py                # CLI helpers (colored output, tables, menus)
+├── templates/               # HTML templates used by the Flask app
+├── student_data.json         # Generated data file (created at runtime)
+└── activity.log                # Generated log file (created at runtime)
 ```
 
----
+##  🚀 How to Run the Project
 
-## ⚙️ Installation
+### Prerequisites
+```bash
+pip install flask colorama
+```
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/<your-username>/Student_Management_System.git
-   cd Student_Management_System
-   ```
+### Command-Line Version
+```bash
+python main.py
+```
 
-2. **Install dependencies**
-   ```bash
-   pip install -r requirements.txt
-   ```
+### Web Version
+```bash
+python app.py
+```
+Then open **http://127.0.0.1:5000** in your browser.
 
-3. **Run the application**
-   ```bash
-   python main.py
-   ```
-
-Requires **Python 3.8+**.
-
----
-
+```
+```
 ## 🧭 Main Menu
 
 ```
@@ -81,7 +76,8 @@ Requires **Python 3.8+**.
 10. Exit
 ```
 
----
+```
+```
 
 ## 🧑‍🎓 Student Fields
 
@@ -94,8 +90,8 @@ Requires **Python 3.8+**.
 | Semester    | int    | Numeric, between 1 and 12               |
 | CGPA        | float  | Numeric, between 0.0 and 4.0            |
 
----
-
+```
+```
 ## 🏗️ OOP Design Highlights
 
 - **Encapsulation** — `Student` fields are private and accessed via
@@ -107,21 +103,35 @@ Requires **Python 3.8+**.
 - **Polymorphism** — `Student.__str__` overrides the default string
   representation for clean, class-specific display.
 
----
+```
+```
 
 ## 📝 Logging
 
-Every significant action (add, update, delete, save, load, errors) is
+- Every significant action (add, update, delete, save, load, errors) is
 recorded in `activity.log` with a timestamp, e.g.:
 
 ```
 2026-07-10 14:32:10 | INFO | Added student: S001 - Ayesha Khan
 2026-07-10 14:33:02 | INFO | Saved 5 student record(s) to student_data.json.
-```
 
----
+```
+```
+```
+##  🔮 Future Improvements
+
+- Migrate storage from JSON to a relational database
+- Add authentication for the web interface
+- Add CSV/Excel export for reports and statistics
+```
+```
+```
+```
+##  👩‍💻 Author
+
+- Developed by **Noor Alishba Sajid** as part of an internship project.
 
 ## 📄 License
 
-This project is open-source and free to use for learning and
-portfolio purposes.
+- This project is open-source and free to use for learning and
+portfolio purposes. 
