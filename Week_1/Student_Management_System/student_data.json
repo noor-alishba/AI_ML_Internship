@@ -1,0 +1,42 @@
+[
+    {
+        "student_id": "01",
+        "name": "Noor",
+        "age": 18,
+        "department": "AI",
+        "semester": 2,
+        "cgpa": 3.68
+    },
+    {
+        "student_id": "02",
+        "name": "Fatima",
+        "age": 17,
+        "department": "CyS",
+        "semester": 1,
+        "cgpa": 3.59
+    },
+    {
+        "student_id": "03",
+        "name": "Arfa",
+        "age": 22,
+        "department": "MLT",
+        "semester": 8,
+        "cgpa": 3.39
+    },
+    {
+        "student_id": "04",
+        "name": "Khadija",
+        "age": 16,
+        "department": "CS",
+        "semester": 1,
+        "cgpa": 3.23
+    },
+    {
+        "student_id": "05",
+        "name": "Hassan",
+        "age": 17,
+        "department": "EE",
+        "semester": 1,
+        "cgpa": 3.46
+    }
+]
