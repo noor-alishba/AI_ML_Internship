@@ -1,67 +1,61 @@
-# 🚀 AI & ML Internship Portfolio
+# 📚 Week 1 – Python Development Projects
 
-Welcome to my AI & ML Internship repository. This repository contains all the projects, assignments, and learning activities completed throughout my internship. Each week focuses on strengthening practical programming skills, software development practices, and version control using Git and GitHub.
+This repository contains the projects and tasks completed during **Week 1** of my AI/ML Internship. The focus of this week was on strengthening Python programming skills, Git & GitHub workflow, modular programming, and project development.
 
-## 📂 Repository Structure
+## 📂 Projects
 
-```
-AI_ML_Internship/
-│
-├── Week_1/
-├── Week_2/
-├── Week_3/
-├── Week_4/
-├── Week_5/
-└── Week_6/
-```
+### 🎓 Student Management System
+A Python-based application for managing student records using both a Command-Line Interface (CLI) and a Flask-based web interface.
 
-Each week's folder contains the projects, source code, documentation, and related resources completed during that phase of the internship.
+**Key Features**
+- Add, update, search, and delete student records
+- Input validation
+- JSON file handling
+- Activity logging
+- Statistics generation
+- Modular architecture
+- Flask web interface
 
-## 📅 Weekly Progress
+---
 
-| Week | Topics / Projects | Status |
-|------|--------------------|--------|
-| ✅ Week 1 | Student Management System, Advanced Command-Line Calculator | Completed |
-| ⏳ Week 2 | Coming Soon | Pending |
-| ⏳ Week 3 | Coming Soon | Pending |
-| ⏳ Week 4 | Coming Soon | Pending |
-| ⏳ Week 5 | Coming Soon | Pending |
-| ⏳ Week 6 | Coming Soon | Pending |
+### 🧮 Advanced Command-Line Calculator
+A menu-driven calculator developed in Python with arithmetic, scientific, and utility operations.
+
+**Key Features**
+- Basic arithmetic operations
+- Scientific functions
+- Expression evaluation
+- Memory register
+- Calculation history
+- Input validation
+- Console-based user interface
+
+---
 
 ## 🛠️ Technologies Used
 
-- Python
+- Python 3
 - Flask
 - HTML
 - CSS
 - JSON
 - Git
 - GitHub
-- VS Code
 
-## 🎯 Internship Objectives
+## 🎯 Learning Outcomes
 
-- Improve Python programming skills.
-- Build real-world projects.
-- Apply Object-Oriented Programming concepts.
-- Practice modular software development.
-- Learn Git and GitHub workflow.
-- Develop clean and maintainable code.
-- Strengthen problem-solving skills.
+During Week 1, I gained practical experience in:
 
-## 📚 Projects
-
-### 🎓 Student Management System
-A Python application for managing student records using a Command-Line Interface (CLI) and a Flask web interface.
-
-### 🧮 Advanced Command-Line Calculator
-A feature-rich Python calculator supporting arithmetic, scientific functions, memory storage, expression evaluation, and calculation history.
-
-More projects will be added as the internship progresses.
+- Python programming
+- Object-Oriented Programming (OOP)
+- Modular Programming
+- File Handling
+- Exception Handling
+- Input Validation
+- Git & GitHub workflow
+- Basic Flask web development
 
 ## 👩‍💻 Author
 
 **Noor Alishba Sajid**  
-BS Artificial Intelligence  
-University of Engineering and Technology (UET) Lahore  
-AI & ML Internship – Advance SofLogics
+BS Artificial Intelligence, University of Engineering and Technology (UET) Lahore
