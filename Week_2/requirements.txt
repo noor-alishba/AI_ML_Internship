@@ -1,0 +1,29 @@
+---
+
+## 📚 References
+
+### 📂 Dataset
+
+The Titanic dataset used in this project was obtained from the Data Science Dojo GitHub repository.
+
+Dataset URL:
+https://raw.githubusercontent.com/datasciencedojo/datasets/master/titanic.csv
+
+GitHub Repository:
+https://github.com/datasciencedojo/datasets/blob/master/titanic.csv
+
+---
+
+### 📖 Official Documentation
+
+- Pandas Documentation
+  https://pandas.pydata.org/docs/
+
+- NumPy Documentation
+  https://numpy.org/doc/
+
+- Matplotlib Documentation
+  https://matplotlib.org/stable/
+
+- Jupyter Documentation
+  https://jupyter.org/documentation
