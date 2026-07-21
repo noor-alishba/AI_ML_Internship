@@ -22,7 +22,7 @@ Each week's folder contains the projects, source code, documentation, and relate
 | Week | Topics / Projects | Status |
 |------|--------------------|--------|
 | ✅ Week 1 | Student Management System, Advanced Command-Line Calculator | Completed |
-| ⏳ Week 2 | Coming Soon | Pending |
+| ✅ Week 2 | Titanic Dataset Exploratory Data Analysis (EDA), Data Cleaning, GroupBy Analysis & Data Visualization | Completed |
 | ⏳ Week 3 | Coming Soon | Pending |
 | ⏳ Week 4 | Coming Soon | Pending |
 | ⏳ Week 5 | Coming Soon | Pending |
@@ -35,6 +35,10 @@ Each week's folder contains the projects, source code, documentation, and relate
 - HTML
 - CSS
 - JSON
+- NumPy
+- Pandas
+- Jupyter Notebook
+- Matplotlib
 - Git
 - GitHub
 - VS Code
@@ -56,6 +60,9 @@ A Python application for managing student records using a Command-Line Interface
 
 ### 🧮 Advanced Command-Line Calculator
 A feature-rich Python calculator supporting arithmetic, scientific functions, memory storage, expression evaluation, and calculation history.
+
+### 🚢 Titanic Dataset Exploratory Data Analysis (EDA)
+Conducted Exploratory Data Analysis (EDA) on the Titanic dataset, including data cleaning, statistical analysis, GroupBy analysis, visualizations, and project documentation using Python, Pandas, NumPy, and Matplotlib.
 
 More projects will be added as the internship progresses.
 
