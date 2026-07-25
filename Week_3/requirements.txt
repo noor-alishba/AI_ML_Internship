@@ -1,0 +1,12 @@
+# Core Libraries
+pandas
+numpy
+matplotlib
+seaborn
+
+# Machine Learning
+scikit-learn
+
+# Jupyter Notebook
+jupyter
+ipykernel
