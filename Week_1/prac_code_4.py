@@ -1,5 +1,5 @@
-# Write a program to Find Second Largest Number
-
+# This program finds the second largest number in a list
+# without using the sort() function.
 
 numbers = [12,45,67,34,89,56]
 

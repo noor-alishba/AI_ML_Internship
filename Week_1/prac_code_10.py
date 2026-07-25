@@ -1,11 +1,5 @@
-# Library Management
-
-# Create:
-# Book
-# Library
-# Store books in a list.
-# Search books.
-# Display books.
+# This program creates Book and Library classes to
+# add, search, and display books.
 
 class Book:
 

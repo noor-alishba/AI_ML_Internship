@@ -1,18 +1,4 @@
-/* ==========================================================
-   style.css
-   ----------
-   Custom styling for the Student Management System web app.
-   Theme: light background, light-gray cards, soft blue accents.
-   ========================================================== */
-
-/* :root {
-    --accent-blue: #4a90e2;
-    --accent-blue-dark: #3a7bc8;
-    --page-bg: #c1c1cb;
-    --card-bg: #6acad9;
-    --border-color: #e9edf2;
-    --text-main: #2c3e50;
-} */
+/* style.css */
 
 :root {
     --accent-blue: #2563EB;
@@ -30,11 +16,6 @@
     --danger: #EF4444;
 }
 
-/* body {
-    background-color: var(--page-bg);
-    color: var(--text-main);
-    font-family: "Segoe UI", Roboto, Arial, sans-serif;
-} */
 
 body {
     background: linear-gradient(135deg, #F4F7FC, #EEF4FF);
@@ -42,20 +23,7 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
-/* ---------- Navbar ---------- */
-/* .navbar {
-    border-bottom: 1px solid var(--border-color);
-}
-
-.nav-link {
-    color: var(--text-main);
-    font-weight: 500;
-}
-
-.nav-link:hover {
-    color: var(--accent-blue);
-} */
-
+/* Navbar */
 
 .navbar {
     background: #1E3A8A !important;
@@ -72,12 +40,8 @@ body {
     color: #BFDBFE !important;
 }
 
-/* ---------- Cards ---------- */
-/* .card {
-    background-color: var(--card-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 14px;
-} */
+/*  Cards  */
+
 
 .card {
     background: white;
@@ -86,14 +50,6 @@ body {
     box-shadow: 0 8px 24px rgba(0,0,0,0.08);
 }
 
-/* .stat-card {
-    border-left: 4px solid var(--accent-blue);
-    transition: transform 0.15s ease-in-out;
-}
-
-.stat-card:hover {
-    transform: translateY(-3px);
-} */
 
 .stat-card {
     transition: all .3s ease;
@@ -104,66 +60,8 @@ body {
     box-shadow: 0 15px 35px rgba(37,99,235,.18);
 }
 
-/* ---------- Buttons ---------- */
-/* .btn {
-    border-radius: 8px;
-}
+/*  Buttons  */
 
-.btn-primary {
-    background-color: var(--accent-blue);
-    border-color: var(--accent-blue);
-}
-
-.btn-primary:hover {
-    background-color: var(--accent-blue-dark);
-    border-color: var(--accent-blue-dark);
-}
-
-.btn-outline-primary {
-    color: var(--accent-blue);
-    border-color: var(--accent-blue);
-}
-
-.btn-outline-primary:hover {
-    background-color: var(--accent-blue);
-    color: #ffffff;
-} */
-
-.btn {
-    border-radius: 10px;
-    font-weight: 600;
-}
-
-.btn-primary {
-    background: #2563EB;
-    border: none;
-}
-
-.btn-primary:hover {
-    background: #1D4ED8;
-}
-
-/* ---------- Table ---------- */
-/* .table thead {
-    background-color: #f1f4f9;
-}
-
-.table-hover tbody tr:hover {
-    background-color: #f5f9ff;
-}
-
-.badge.bg-primary {
-    background-color: var(--accent-blue) !important;
-}
-
-.dept-badge {
-    background-color: #eaf2fd;
-    color: var(--accent-blue-dark);
-    border: 1px solid #d3e4fa;
-    font-weight: 500;
-    padding: 0.5em 0.9em;
-    border-radius: 20px;
-} */
 
 
 .table {
@@ -181,16 +79,8 @@ body {
     background: #EFF6FF;
 }
 
-/* ---------- Forms ---------- */
-/* .form-control {
-    border-radius: 8px;
-    border: 1px solid #dee2e6;
-}
+/*  Forms  */
 
-.form-control:focus {
-    border-color: var(--accent-blue);
-    box-shadow: 0 0 0 0.2rem rgba(74, 144, 226, 0.15);
-} */
 
 .form-control {
     border-radius: 10px;
@@ -203,7 +93,7 @@ body {
     box-shadow: 0 0 0 4px rgba(37,99,235,.15);
 }
 
-/* ---------- Alerts (flash messages) ---------- */
+/*  Alerts (flash messages)  */
 .alert {
     border-radius: 10px;
     border: none;
@@ -219,10 +109,8 @@ body {
     color: #c0392b;
 }
 
-/* ---------- Footer ---------- */
-/* footer {
-    border-top: 1px solid var(--border-color);
-} */
+/*  Footer  */
+
 
 footer {
     margin-top: 40px;

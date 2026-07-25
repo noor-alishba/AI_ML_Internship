@@ -1,12 +1,12 @@
-# Count the occurrence of every character using a dictionary.
+# This program counts the frequency of each character in a string
+# using a dictionary.
 
+text = input("Enter a string: ")
 
-numbers = [1,2,3,2,4,1,5]
+frequency = {}
 
-result = []
+for char in text:
+    frequency[char] = frequency.get(char, 0) + 1
 
-for num in numbers:
-    if num not in result:
-        result.append(num)
-
-print(result)
+for key, value in frequency.items():
+    print(key, ":", value)

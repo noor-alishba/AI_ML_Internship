@@ -1,4 +1,3 @@
-
 """
 main.py
 
@@ -13,7 +12,6 @@ from validator import Validator, ValidationError
 
 
 class Colors:
-    
 
     RESET = "\033[0m"
     BOLD = "\033[1m"
@@ -28,10 +26,9 @@ class Colors:
 
 
 class ConsoleUI:
-    
 
     BOX_WIDTH = 70
-    CONTENT_WIDTH = BOX_WIDTH - 4  
+    CONTENT_WIDTH = BOX_WIDTH - 4
     COLUMN_WIDTH = CONTENT_WIDTH // 2
 
     # Low-level box-drawing helpers
@@ -71,9 +68,9 @@ class ConsoleUI:
     def print_banner(cls):
         print(cls._top_border())
         print(cls._line("ADVANCED COMMAND-LINE CALCULATOR", "center",
-                         text_color=Colors.BOLD + Colors.CYAN))
+                        text_color=Colors.BOLD + Colors.CYAN))
         print(cls._line("Arithmetic  \u2022  Scientific  \u2022  Expressions",
-                         "center", text_color=Colors.DIM))
+                        "center", text_color=Colors.DIM))
         print(cls._bottom_border())
         print()
 
@@ -89,7 +86,7 @@ class ConsoleUI:
     def _menu_section(cls, title, items):
         """Print a titled section of menu options, two per row."""
         print(cls._line(f"\u25b8 {title}",
-                         text_color=Colors.BOLD + Colors.YELLOW))
+                        text_color=Colors.BOLD + Colors.YELLOW))
         for index in range(0, len(items), 2):
             left = items[index]
             right = items[index + 1] if index + 1 < len(items) else ""
@@ -119,7 +116,7 @@ class ConsoleUI:
 
         print(cls._top_border())
         print(cls._line("MAIN MENU", "center",
-                         text_color=Colors.BOLD + Colors.CYAN))
+                        text_color=Colors.BOLD + Colors.CYAN))
         print(cls._divider())
         cls._menu_section("Basic Arithmetic", basic)
         print(cls._line())
@@ -152,10 +149,10 @@ class ConsoleUI:
         print()
         print(cls._top_border(Colors.GREEN))
         print(cls._line(f" RESULT \u2014 {label}", text_color=Colors.BOLD,
-                         color=Colors.GREEN))
+                        color=Colors.GREEN))
         print(cls._divider(Colors.GREEN))
         print(cls._line(f" {value}", text_color=Colors.BOLD + Colors.GREEN,
-                         color=Colors.GREEN))
+                        color=Colors.GREEN))
         print(cls._bottom_border(Colors.GREEN))
 
     @classmethod
@@ -175,12 +172,12 @@ class ConsoleUI:
         print()
         print(cls._top_border(Colors.MAGENTA))
         print(cls._line("CALCULATION HISTORY", "center",
-                         color=Colors.MAGENTA,
-                         text_color=Colors.BOLD + Colors.MAGENTA))
+                        color=Colors.MAGENTA,
+                        text_color=Colors.BOLD + Colors.MAGENTA))
         print(cls._divider(Colors.MAGENTA))
         if not entries:
             print(cls._line("No calculations have been performed yet.",
-                             color=Colors.MAGENTA, text_color=Colors.DIM))
+                            color=Colors.MAGENTA, text_color=Colors.DIM))
         else:
             for index, entry in enumerate(entries, start=1):
                 text = f"{index:>2}. {entry}"
@@ -199,7 +196,7 @@ class ConsoleUI:
         print()
         print(cls._top_border(Colors.CYAN))
         print(cls._line("Thank you for using the Advanced Calculator!",
-                         "center", text_color=Colors.BOLD + Colors.CYAN))
+                        "center", text_color=Colors.BOLD + Colors.CYAN))
         print(cls._line("Goodbye.", "center", text_color=Colors.DIM))
         print(cls._bottom_border(Colors.CYAN))
 
@@ -234,7 +231,7 @@ class CalculatorApp:
             "21": self._handle_clear_history,
             "0": self._handle_exit,
         }
-        
+
         self._no_pause_actions = {"0"}
 
     def run(self) -> None:
@@ -254,7 +251,7 @@ class CalculatorApp:
                 except ValidationError as error:
                     self.ui.print_error(str(error))
                 except Exception as error:
-                    
+
                     self.ui.print_error(f"Unexpected error: {error}")
 
                 if self.running and choice not in self._no_pause_actions:
@@ -291,7 +288,7 @@ class CalculatorApp:
         a = self._read_number("Enter the first number: ")
         b = self._read_number("Enter the second number: ")
         self.ui.print_result("Multiplication",
-                              self.calculator.multiply(a, b))
+                             self.calculator.multiply(a, b))
 
     def _handle_divide(self):
         a = self._read_number("Enter the numerator: ")
@@ -307,18 +304,18 @@ class CalculatorApp:
         a = self._read_number("Enter the first number: ")
         b = self._read_number("Enter the second number: ")
         self.ui.print_result("Floor Division",
-                              self.calculator.floor_divide(a, b))
+                             self.calculator.floor_divide(a, b))
 
     def _handle_power(self):
         base = self._read_number("Enter the base: ")
         exponent = self._read_number("Enter the exponent: ")
         self.ui.print_result("Exponent",
-                              self.calculator.power(base, exponent))
+                             self.calculator.power(base, exponent))
 
     def _handle_square_root(self):
         value = self._read_number("Enter a number: ")
         self.ui.print_result("Square Root",
-                              self.calculator.square_root(value))
+                             self.calculator.square_root(value))
 
     def _handle_factorial(self):
         value = self._read_non_negative_integer(
@@ -347,12 +344,12 @@ class CalculatorApp:
     def _handle_natural_log(self):
         value = self._read_number("Enter a positive number: ")
         self.ui.print_result("Natural Log",
-                              self.calculator.natural_log(value))
+                             self.calculator.natural_log(value))
 
     def _handle_log10(self):
         value = self._read_number("Enter a positive number: ")
         self.ui.print_result("Log Base 10",
-                              self.calculator.log_base_10(value))
+                             self.calculator.log_base_10(value))
 
     def _handle_expression(self):
         raw_expression = self.ui.prompt(

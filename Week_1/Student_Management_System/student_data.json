@@ -8,20 +8,12 @@
         "cgpa": 3.68
     },
     {
-        "student_id": "02",
-        "name": "Fatima",
-        "age": 17,
-        "department": "CyS",
-        "semester": 1,
-        "cgpa": 3.59
-    },
-    {
-        "student_id": "03",
-        "name": "Arfa",
-        "age": 22,
-        "department": "MLT",
-        "semester": 8,
-        "cgpa": 3.39
+        "student_id": "07",
+        "name": "Hira",
+        "age": 19,
+        "department": "AI",
+        "semester": 2,
+        "cgpa": 3.36
     },
     {
         "student_id": "04",
@@ -32,11 +24,35 @@
         "cgpa": 3.23
     },
     {
+        "student_id": "06",
+        "name": "Azka",
+        "age": 22,
+        "department": "CS",
+        "semester": 7,
+        "cgpa": 3.21
+    },
+    {
+        "student_id": "02",
+        "name": "Fatima",
+        "age": 17,
+        "department": "CyS",
+        "semester": 1,
+        "cgpa": 3.59
+    },
+    {
         "student_id": "05",
         "name": "Hassan",
         "age": 17,
         "department": "EE",
         "semester": 1,
         "cgpa": 3.46
+    },
+    {
+        "student_id": "03",
+        "name": "Arfa",
+        "age": 22,
+        "department": "MLT",
+        "semester": 8,
+        "cgpa": 3.39
     }
 ]

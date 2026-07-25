@@ -1,8 +1,5 @@
-# Bank Account System 
-# Requirements:
-# Deposit
-# Withdraw
-# Check Balance
+# This program creates a Bank Account class that allows
+# users to deposit, withdraw, and check their balance.
 
 
 class BankAccount:

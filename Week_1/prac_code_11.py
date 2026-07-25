@@ -1,10 +1,5 @@
-# Employee Payroll
-
-# Create:
-#  Employee class
-# Methods
-# bonus()
-# annual_salary
+# This program creates an Employee class to calculate
+# annual salary and employee bonus.
 
 
 class Employee:

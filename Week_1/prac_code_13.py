@@ -1,4 +1,5 @@
-# Shape Area Calculator (Polymorphism)
+# This program demonstrates polymorphism by calculating
+# the area of different shapes.
 
 
 class Shape:

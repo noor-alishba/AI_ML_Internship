@@ -1,4 +1,5 @@
-# Student Management Class
+# This program creates a Student class to store, display,
+# and update student information.
 
 
 class Student:

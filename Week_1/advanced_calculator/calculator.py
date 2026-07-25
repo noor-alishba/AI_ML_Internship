@@ -8,12 +8,11 @@ calculation history for the command-line calculator.
 
 import math
 
-from validator import Validator, ValidationError
+from validator import ValidationError, Validator
 
 
 class Calculator:
-   
-    
+    """Provides arithmetic, scientific, memory, and history operations."""
 
     def __init__(self):
         self._history = []
@@ -117,13 +116,13 @@ class Calculator:
     # Expression evaluation
 
     def evaluate_expression(self, expression: str) -> float:
-        
         try:
             result = eval(expression, {"__builtins__": {}}, {})
         except ZeroDivisionError:
             raise ValidationError("Division by zero is not allowed.")
         except Exception:
             raise ValidationError("Could not evaluate the expression.")
+
         self._record_history(f"{expression} = {result}")
         return result
 

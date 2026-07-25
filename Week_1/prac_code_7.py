@@ -1,5 +1,5 @@
-# Write a program to find highest, lowest and average salarries of three employees
-
+# This program analyzes employee salary data to find
+# the highest, lowest, and average salary.
 
 employees = {
     "Ali":50000,

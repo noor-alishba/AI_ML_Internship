@@ -1,10 +1,5 @@
-# Course Registration System
-
-# Requirements:
-# Create
-# Student
-# Course
-# A student can register in multiple courses.
+# This program allows students to register in multiple
+# courses using object-oriented programming.
 
 
 class Course:

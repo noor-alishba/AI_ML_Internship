@@ -1,4 +1,6 @@
-# Write a program that checks whether a given string is a palindrome without using slicing ([::-1]).
+# This program checks whether a given string is a palindrome or not
+# without using Python's slicing method.
+
 
 text = input("Enter a string: ").lower()
 
