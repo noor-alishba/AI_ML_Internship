@@ -22,8 +22,8 @@ Each week's folder contains the projects, source code, documentation, and relate
 | Week | Topics / Projects | Status |
 |------|--------------------|--------|
 | ✅ Week 1 | Student Management System, Advanced Command-Line Calculator | Completed |
-| ⏳ Week 2 | Coming Soon | Pending |
-| ⏳ Week 3 | Coming Soon | Pending |
+| ✅ Week 2 | Titanic Dataset Exploratory Data Analysis (EDA), Data Cleaning, GroupBy Analysis & Data Visualization | Completed |
+| ✅ Week 3 | Built a Heart Failure Prediction model by performing data preprocessing, visualization, feature encoding, model training, and performance evaluation. | Completed |
 | ⏳ Week 4 | Coming Soon | Pending |
 | ⏳ Week 5 | Coming Soon | Pending |
 | ⏳ Week 6 | Coming Soon | Pending |
@@ -35,6 +35,16 @@ Each week's folder contains the projects, source code, documentation, and relate
 - HTML
 - CSS
 - JSON
+- NumPy
+- Pandas
+- Matplotlib
+- Jupyter Notebook
+- Seaborn
+- Scikit-learn
+- Logistic Regression
+- Pipeline
+- ColumnTransformer
+- OneHotEncoder
 - Git
 - GitHub
 - VS Code
@@ -52,10 +62,20 @@ Each week's folder contains the projects, source code, documentation, and relate
 ## 📚 Projects
 
 ### 🎓 Student Management System
+
 A Python application for managing student records using a Command-Line Interface (CLI) and a Flask web interface.
 
 ### 🧮 Advanced Command-Line Calculator
+
 A feature-rich Python calculator supporting arithmetic, scientific functions, memory storage, expression evaluation, and calculation history.
+
+### 🚢 Titanic Dataset Exploratory Data Analysis (EDA)
+
+Conducted Exploratory Data Analysis (EDA) on the Titanic dataset, including data cleaning, statistical analysis, GroupBy analysis, visualizations, and project documentation using Python, Pandas, NumPy, and Matplotlib.
+
+### ❤️ Heart Failure Prediction System
+
+Built a machine learning project to predict the likelihood of heart disease using patient health records. The project includes data preprocessing, exploratory data analysis (EDA), data visualization, feature engineering, Logistic Regression model training, pipeline implementation, model evaluation, and performance metrics.
 
 More projects will be added as the internship progresses.
 
