@@ -92,7 +92,7 @@ Conducted Exploratory Data Analysis (EDA) on the Titanic dataset, including data
 
 Built a machine learning project to predict the likelihood of heart disease using patient health records. The project includes data preprocessing, exploratory data analysis (EDA), data visualization, feature engineering, Logistic Regression model training, pipeline implementation, model evaluation, and performance metrics.
 
-### ### ❤️ Heart Disease Prediction – Advanced Model Evaluation & Optimization
+### ❤️ Heart Disease Prediction – Advanced Model Evaluation & Optimization
 
 Built an advanced Heart Disease Prediction system by integrating preprocessing pipelines, cross-validation, GridSearchCV hyperparameter tuning, Random Forest optimization, feature importance analysis, confusion matrix evaluation, and model persistence to improve prediction performance and create a reusable machine learning workflow.
 
