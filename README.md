@@ -24,30 +24,45 @@ Each week's folder contains the projects, source code, documentation, and relate
 | ✅ Week 1 | Student Management System, Advanced Command-Line Calculator | Completed |
 | ✅ Week 2 | Titanic Dataset Exploratory Data Analysis (EDA), Data Cleaning, GroupBy Analysis & Data Visualization | Completed |
 | ✅ Week 3 | Built a Heart Failure Prediction model by performing data preprocessing, visualization, feature encoding, model training, and performance evaluation. | Completed |
-| ⏳ Week 4 | Coming Soon | Pending |
+| ✅ Week 4 | Enhanced the Heart Disease Prediction project by implementing machine learning pipelines, cross-validation, hyperparameter tuning, model comparison, feature importance analysis, and model persistence using Joblib. | Completed |
 | ⏳ Week 5 | Coming Soon | Pending |
 | ⏳ Week 6 | Coming Soon | Pending |
 
 ## 🛠️ Technologies Used
 
 - Python
-- Flask
-- HTML
-- CSS
-- JSON
+- Jupyter Notebook
+- VS Code
+- Git
+- GitHub
+
+#### 📚 Libraries
 - NumPy
 - Pandas
 - Matplotlib
-- Jupyter Notebook
 - Seaborn
 - Scikit-learn
+- Flask
+
+#### 🤖 Machine Learning
 - Logistic Regression
+- Random Forest Classifier
 - Pipeline
 - ColumnTransformer
 - OneHotEncoder
-- Git
-- GitHub
-- VS Code
+- StandardScaler
+- SimpleImputer
+- Train-Test Split
+- Cross Validation
+- GridSearchCV
+- Feature Importance Analysis
+- Confusion Matrix
+- Classification Report
+- Accuracy Score
+- Joblib
+
+#### 📄 Data Formats
+- JSON
 
 ## 🎯 Internship Objectives
 
@@ -76,6 +91,10 @@ Conducted Exploratory Data Analysis (EDA) on the Titanic dataset, including data
 ### ❤️ Heart Failure Prediction System
 
 Built a machine learning project to predict the likelihood of heart disease using patient health records. The project includes data preprocessing, exploratory data analysis (EDA), data visualization, feature engineering, Logistic Regression model training, pipeline implementation, model evaluation, and performance metrics.
+
+### ### ❤️ Heart Disease Prediction – Advanced Model Evaluation & Optimization
+
+Built an advanced Heart Disease Prediction system by integrating preprocessing pipelines, cross-validation, GridSearchCV hyperparameter tuning, Random Forest optimization, feature importance analysis, confusion matrix evaluation, and model persistence to improve prediction performance and create a reusable machine learning workflow.
 
 More projects will be added as the internship progresses.
 
