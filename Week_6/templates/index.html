@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Heart Disease Prediction</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            margin: 0;
+            padding: 30px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 6px;
+        }
+
+        input,
+        select {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        .full-width {
+            grid-column: span 2;
+        }
+
+        button {
+            width: 100%;
+            padding: 13px;
+            margin-top: 25px;
+            border: none;
+            border-radius: 6px;
+            background: #1f6feb;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1557b0;
+        }
+
+        #result {
+            margin-top: 25px;
+            padding: 20px;
+            border-radius: 8px;
+            display: none;
+        }
+
+        .success {
+            background: #e8f5e9;
+            border: 1px solid #81c784;
+        }
+
+        .error {
+            background: #ffebee;
+            border: 1px solid #e57373;
+        }
+
+        .result-item {
+            margin: 8px 0;
+        }
+
+        .loading {
+            background: #fff8e1;
+            border: 1px solid #ffcc80;
+        }
+
+        @media (max-width: 700px) {
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .full-width {
+                grid-column: span 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>❤️ Heart Disease Prediction</h1>
+
+    <p class="subtitle">
+        Random Forest Machine Learning API
+    </p>
+
+    <form id="predictionForm">
+
+        <div class="form-grid">
+
+            <div class="form-group">
+                <label for="Age">Age</label>
+                <input type="number" id="Age" required>
+            </div>
+
+            <div class="form-group">
+                <label for="Sex">Sex</label>
+                <select id="Sex" required>
+                    <option value="M">Male</option>
+                    <option value="F">Female</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="ChestPainType">Chest Pain Type</label>
+                <select id="ChestPainType" required>
+                    <option value="ATA">ATA</option>
+                    <option value="NAP">NAP</option>
+                    <option value="ASY">ASY</option>
+                    <option value="TA">TA</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="RestingBP">Resting Blood Pressure</label>
+                <input type="number" id="RestingBP" required>
+            </div>
+
+            <div class="form-group">
+                <label for="Cholesterol">Cholesterol</label>
+                <input type="number" id="Cholesterol" required>
+            </div>
+
+            <div class="form-group">
+                <label for="FastingBS">Fasting Blood Sugar</label>
+                <select id="FastingBS" required>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="RestingECG">Resting ECG</label>
+                <select id="RestingECG" required>
+                    <option value="Normal">Normal</option>
+                    <option value="ST">ST</option>
+                    <option value="LVH">LVH</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="MaxHR">Maximum Heart Rate</label>
+                <input type="number" id="MaxHR" required>
+            </div>
+
+            <div class="form-group">
+                <label for="ExerciseAngina">Exercise Angina</label>
+                <select id="ExerciseAngina" required>
+                    <option value="N">No</option>
+                    <option value="Y">Yes</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="Oldpeak">Oldpeak</label>
+                <input type="number" id="Oldpeak" step="0.1" required>
+            </div>
+
+            <div class="form-group full-width">
+                <label for="ST_Slope">ST Slope</label>
+                <select id="ST_Slope" required>
+                    <option value="Up">Up</option>
+                    <option value="Flat">Flat</option>
+                    <option value="Down">Down</option>
+                </select>
+            </div>
+
+        </div>
+
+        <button type="submit">
+            🔍 Predict Heart Disease
+        </button>
+
+    </form>
+
+    <div id="result"></div>
+
+</div>
+
+<script>
+
+const form = document.getElementById("predictionForm");
+const resultDiv = document.getElementById("result");
+
+form.addEventListener("submit", async function(event) {
+
+    event.preventDefault();
+
+    resultDiv.style.display = "block";
+    resultDiv.className = "loading";
+    resultDiv.innerHTML = "<h3>⏳ Processing prediction...</h3>";
+
+    const patientData = {
+        Age: Number(document.getElementById("Age").value),
+        Sex: document.getElementById("Sex").value,
+        ChestPainType: document.getElementById("ChestPainType").value,
+        RestingBP: Number(document.getElementById("RestingBP").value),
+        Cholesterol: Number(document.getElementById("Cholesterol").value),
+        FastingBS: Number(document.getElementById("FastingBS").value),
+        RestingECG: document.getElementById("RestingECG").value,
+        MaxHR: Number(document.getElementById("MaxHR").value),
+        ExerciseAngina: document.getElementById("ExerciseAngina").value,
+        Oldpeak: Number(document.getElementById("Oldpeak").value),
+        ST_Slope: document.getElementById("ST_Slope").value
+    };
+
+    try {
+
+        const response = await fetch("/predict-ui", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(patientData)
+        });
+
+        const data = await response.json();
+
+        resultDiv.style.display = "block";
+
+        if (!response.ok) {
+
+            resultDiv.className = "error";
+
+            resultDiv.innerHTML = `
+                <h3>❌ Prediction Error</h3>
+                <p><strong>${data.error || "An error occurred."}</strong></p>
+                <p>${data.message || ""}</p>
+            `;
+
+            return;
+        }
+
+        resultDiv.className = "success";
+
+        const predictionText =
+            data.prediction === 1
+                ? "⚠️ Heart disease detected"
+                : "✅ No heart disease detected";
+
+        resultDiv.innerHTML = `
+            <h3>📊 Prediction Result</h3>
+
+            <div class="result-item">
+                <strong>Prediction:</strong>
+                ${predictionText}
+            </div>
+
+            <div class="result-item">
+                <strong>Probability of no heart disease:</strong>
+                ${(data.probability_no_heart_disease * 100).toFixed(2)}%
+            </div>
+
+            <div class="result-item">
+                <strong>Probability of heart disease:</strong>
+                ${(data.probability_heart_disease * 100).toFixed(2)}%
+            </div>
+
+            <div class="result-item">
+                <strong>Model:</strong>
+                ${data.model}
+            </div>
+
+            <div class="result-item">
+                <strong>Model version:</strong>
+                ${data.model_version}
+            </div>
+        `;
+
+    } catch (error) {
+
+        resultDiv.style.display = "block";
+        resultDiv.className = "error";
+
+        resultDiv.innerHTML = `
+            <h3>❌ Connection Error</h3>
+            <p>Could not connect to the prediction API.</p>
+        `;
+    }
+
+});
+
+</script>
+
+</body>
+</html>
