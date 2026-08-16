@@ -25,9 +25,9 @@ Each week's folder contains the projects, source code, documentation, and relate
 | ✅ Week 2 | Titanic Dataset Exploratory Data Analysis (EDA), Data Cleaning, GroupBy Analysis & Data Visualization | Completed |
 | ✅ Week 3 | Built a Heart Failure Prediction model by performing data preprocessing, visualization, feature encoding, model training, and performance evaluation. | Completed |
 | ✅ Week 4 | Enhanced the Heart Disease Prediction project by implementing machine learning pipelines, cross-validation, hyperparameter tuning, model comparison, feature importance analysis, and model persistence using Joblib. | Completed |
-| ✅ Week 5 | Completed |  ML Model Serving API Built a machine-learning model-serving REST API with input validation, structured JSON responses, request logging, and automated API testing. |
-| ✅ Week 6 | Completed | ML Model API: Final Release
-Finalized and containerized the Week 5 ML API with batch prediction, API-key authentication, structured logging, automated testing, Docker deployment, and an HTML frontend.|
+| ✅ Week 5 | ML Model Serving API Built a machine-learning model-serving REST API with input validation, structured JSON responses, request logging, and automated API testing. | Completed  |
+| ✅ Week 6 |  ML Model API: Final Release
+Finalized and containerized the Week 5 ML API with batch prediction, API-key authentication, structured logging, automated testing, Docker deployment, and an HTML frontend. | Completed|
 
 ## 🛠️ Technologies Used
 
