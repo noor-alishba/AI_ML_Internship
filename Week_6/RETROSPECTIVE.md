@@ -1,0 +1,9 @@
+# 📝 Project Retrospective
+
+This project was a valuable experience in taking a Machine Learning model from development to a publicly accessible API. The Random Forest model was successfully integrated into a FastAPI-based prediction service and deployed to the cloud. The final system supports health checking, authenticated predictions, batch predictions, an interactive HTML frontend, automated live API testing, and basic monitoring.
+
+One of the main strengths of the project is the complete model-serving workflow. The saved model is loaded by the API, patient data is validated before prediction, probability scores are returned along with the prediction, and API access is protected through an environment-based API key. Automated tests against the deployed API confirmed that the health endpoint works, authenticated prediction requests succeed, and unauthorized requests are rejected.
+
+However, the project also has limitations. The model's predictions depend heavily on the quality and representativeness of the training dataset. A Machine Learning prediction should not be treated as a medical diagnosis, and real-world clinical validation would be required before using such a system in practice. The free cloud hosting environment may also have limitations related to resources, availability, and scalability.
+
+If I continued this project, I would focus on improving model evaluation and validation using additional datasets and cross-validation. I would also explore model explainability techniques such as SHAP to make predictions easier to understand. Further improvements could include stronger authentication, database-backed monitoring, CI/CD automation, improved frontend design, and containerized deployment. Overall, the project helped me understand the complete process of serving, testing, securing, and deploying a Machine Learning model as a real-world API.
