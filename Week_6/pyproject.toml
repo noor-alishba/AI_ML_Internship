@@ -17,3 +17,6 @@ dependencies = [
 
 [tool.fastapi]
 entrypoint = "fastapi_app:app"
+
+[tool.setuptools]
+py-modules = ["app", "fastapi_app"]
