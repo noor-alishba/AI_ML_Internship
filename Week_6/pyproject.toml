@@ -1,0 +1,19 @@
+[project]
+name = "heart-disease-api"
+version = "1.0.0"
+description = "Heart Disease Prediction ML API"
+requires-python = ">=3.10"
+
+dependencies = [
+    "fastapi",
+    "Flask",
+    "a2wsgi",
+    "joblib",
+    "pandas",
+    "numpy",
+    "scikit-learn",
+    "python-dotenv"
+]
+
+[tool.fastapi]
+entrypoint = "fastapi_app:app"
