@@ -25,8 +25,9 @@ Each week's folder contains the projects, source code, documentation, and relate
 | ✅ Week 2 | Titanic Dataset Exploratory Data Analysis (EDA), Data Cleaning, GroupBy Analysis & Data Visualization | Completed |
 | ✅ Week 3 | Built a Heart Failure Prediction model by performing data preprocessing, visualization, feature encoding, model training, and performance evaluation. | Completed |
 | ✅ Week 4 | Enhanced the Heart Disease Prediction project by implementing machine learning pipelines, cross-validation, hyperparameter tuning, model comparison, feature importance analysis, and model persistence using Joblib. | Completed |
-| ⏳ Week 5 | Coming Soon | Pending |
-| ⏳ Week 6 | Coming Soon | Pending |
+| ✅ Week 5 | Completed |  ML Model Serving API Built a machine-learning model-serving REST API with input validation, structured JSON responses, request logging, and automated API testing. |
+| ✅ Week 6 | Completed | ML Model API: Final Release
+Finalized and containerized the Week 5 ML API with batch prediction, API-key authentication, structured logging, automated testing, Docker deployment, and an HTML frontend.|
 
 ## 🛠️ Technologies Used
 
@@ -95,6 +96,13 @@ Built a machine learning project to predict the likelihood of heart disease usin
 ### ❤️ Heart Disease Prediction – Advanced Model Evaluation & Optimization
 
 Built an advanced Heart Disease Prediction system by integrating preprocessing pipelines, cross-validation, GridSearchCV hyperparameter tuning, Random Forest optimization, feature importance analysis, confusion matrix evaluation, and model persistence to improve prediction performance and create a reusable machine learning workflow.
+
+### 🤖 ML Model Serving API
+Developed a Flask-based REST API that serves a trained machine-learning model for making predictions. The project includes patient-data input validation, structured JSON responses, request logging, model loading, health/status checking, and automated API testing. This week focused on taking the trained ML model and making it accessible through API endpoints.
+
+### ❤️ Heart Disease Prediction API
+
+A Dockerized Flask REST API that uses a Random Forest machine-learning model for heart disease prediction, with validation, authentication, batch prediction, logging, and automated testing.
 
 More projects will be added as the internship progresses.
 
